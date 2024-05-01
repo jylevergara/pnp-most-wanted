@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "TEJERO, Bobby Novero",
+        "offenses": "Robbery; Grave Coercion; Murder (3 counts); Arson",
+        "issuingCourt": "RTC 11th JR, Br 28, Lianga, Surigao del Sur",
+        "alias": null,
+        "reward": "1,200,000.00",
+        "dilgMcNo": "2015-136",
+        "criminalCaseNo": "L-2854, L-2855, L-2856, L-2857, L-2858 & L-2859",
+        "region": "13",
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+    },
+    {
+        "id": 2,
+        "name": "FAJARDO, Harold Lumbres",
+        "offenses": "KFR; Violation of RA 6539 (Anti Carnapping Act)",
+        "issuingCourt": "RTC Br 89, Bacoor Cavite",
+        "alias": "Harold",
+        "reward": "1,000,000.00",
+        "dilgMcNo": "2004-12",
+        "criminalCaseNo": "B-2002-198; B-2002-199",
+        "region": "4A",
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+    },
+    {
+        "id": 3,
+        "name": "ARTUZ, Joselito Adea",
+        "offenses": "Violation of RA 9165 (Sale of Dangerous Drugs)",
+        "issuingCourt": "RTC 1st JR, Br 33, Bauang, La Union",
+        "alias": "George Cordero/ Joey",
+        "reward": "1,000,000.00",
+        "dilgMcNo": "2017-51",
+        "criminalCaseNo": "3662-BG",
+        "region": "1",
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+    },
+    {
+        "id": 4,
+        "name": "DE GUZMAN, Cesar",
+        "offenses": "Double Murder; Frustrated Murder",
+        "issuingCourt": "RTC, 1st JR, Br 57 & 56, San Carlos City, Pangasinan",
+        "alias": "Cabesa",
+        "reward": "1,000,000.00",
+        "dilgMcNo": "2008-09",
+        "criminalCaseNo": "4887; 4907",
+        "region": "1",
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+    },
+    {
+        "id": 5,
+        "name": "DICKPUS, Corey",
+        "offenses": "Murder",
+        "issuingCourt": "RTC Br 25, Tabuk, Kalinga",
+        "alias": null,
+        "reward": null,
+        "dilgMcNo": null,
+        "criminalCaseNo": "26-97",
+        "region": null,
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+    },
+    {
+        "id": 6,
+        "name": "IRAN, Eduardo",
+        "offenses": "Robbery/Hold-up/Kidnapping with Murder/Frustrated Murder/Attempted Murder",
+        "issuingCourt": "RTC Br1, Kalibo, Aklan; RTC Br 12, San Jose, Antique; MCTC Br 1, Gen Santos City",
+        "alias": "Boy Muslim/Israel Iran",
+        "reward": "1,000,000.00",
+        "dilgMcNo": "93-56",
+        "criminalCaseNo": "2402; 32801; 30323; 30373; 3032; 3355; 3354; 3352; 3351; 3350",
+        "region": "6",
+        "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+    }
+]
