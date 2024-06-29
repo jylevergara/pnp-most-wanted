@@ -1,11 +1,8 @@
+import Nav from "@/app/(components)/Nav";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-// console.log('congrats, you made it to this page')
-
 const getPersonById = async (id) => {
-  // const { id } = params;
-  console.log("getPerson page", id);
   const res = await fetch(`http://localhost:3000/api/Persons/${id}`, {
     cache: "no-store",
   });
@@ -22,6 +19,7 @@ const Info = async ({ params }) => {
 
   return (
     <main className="min-h-screen items-center p-24 bg-gray-900 sm: p-6">
+      <Nav/>
       <div>
         <div>
           <h3 className="text-lg">Most Wanted Person Information</h3>

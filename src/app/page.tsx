@@ -12,6 +12,7 @@ import {
 } from "react";
 import userData from "./wanted.json";
 import Link from "next/link";
+import Nav from "./(components)/Nav";
 
 const getPersons = async () => {
   try {
@@ -33,6 +34,7 @@ const Home = async () => {
   const { persons } = await getPersons();
   return (
     <main className="min-h-screen items-center p-24 bg-gray-900 sm: p-6 ">
+      <Nav/>
       <div>
         <div className="text-center">
           <h1 className="text-3xl font-bold">
