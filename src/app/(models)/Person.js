@@ -6,7 +6,8 @@ mongoose.Promise = global.Promise;
 const personSchema = new Schema(
   {
     id: String,
-    name: String,
+    lastName: String,
+    firstName: String,
     offenses: String,
     issuingCourt: String,
     alias: String,

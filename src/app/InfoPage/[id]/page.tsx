@@ -31,7 +31,7 @@ const Info = async ({ params }) => {
               <dt className="font-medium text-slate-400 leading-6">
                 Full Name
               </dt>
-              <dd>{person.name}</dd>
+              <dd>{person.lastName}, {person.firstName}</dd>
             </div>
             <div className="py-3 border-t">
               <dt className="font-medium text-slate-400 leading-6">Alias</dt>

@@ -10,7 +10,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import userData from "./wanted.json";
+// import userData from "./wanted.json";
 import Link from "next/link";
 import Nav from "./(components)/Nav";
 
@@ -46,17 +46,7 @@ const Home = async () => {
             (person: {
               id: Key | null | undefined;
               image: string | undefined;
-              name:
-                | string
-                | number
-                | bigint
-                | boolean
-                | ReactElement<any, string | JSXElementConstructor<any>>
-                | Iterable<ReactNode>
-                | ReactPortal
-                | Promise<AwaitedReactNode>
-                | null
-                | undefined;
+              name: string
               reward:
                 | string
                 | number
@@ -90,7 +80,7 @@ const Home = async () => {
                     alt={`photo of ${person.name}`}
                   />
                   <h3 className="mt-6 text-lg font-semibold text-white leading-7 text-center">
-                    {person.name}
+                    {person.lastName}, {person.firstName}
                   </h3>
                   <p className="text-sm text-gray-300 text-center">
                     {person.reward ? person.reward : "no reward indicated"}
