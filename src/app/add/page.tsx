@@ -152,7 +152,7 @@ const Add = () => {
                   fill="currentColor"
                   aria-hidden="true"
                   className="h-12 w-12"
-                //   class="np rs axx"
+                  //   class="np rs axx"
                 >
                   <path
                     fill-rule="evenodd"
@@ -160,10 +160,27 @@ const Add = () => {
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                <button className="leading-5 py-2 bg-[rgba(255,255,255,0.05)] font-semibold px-3 rounded-md">Change</button>
+                <button className="leading-5 py-2 bg-[rgba(255,255,255,0.05)] font-semibold px-3 rounded-md">
+                  Change
+                </button>
               </div>
+             
             </div>
           </div>
+          <div className="border-t pt-6 mt-6 flex justify-end gap-x-6">
+                <button
+                  type="button"
+                  className="text-sm font-semibold leading-6 text-white"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="rounded-md bg-yellow-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  Save
+                </button>
+              </div>
         </form>
       </div>
     </main>
