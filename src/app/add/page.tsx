@@ -2,8 +2,13 @@
 
 import { useState } from "react";
 import Nav from "../(components)/Nav";
+import { uploadFile } from "@/app/add/actions";
+import { useFormState } from "react-dom";
 
 const Add = () => {
+  const initialState = { message: null };
+  const [state, formAction] = useFormState(uploadFile, initialState);
+
   const [values, setValues] = useState({
     lastName: "",
     firstName: "",
@@ -33,7 +38,7 @@ const Add = () => {
     <main className="min-h-screen items-center p-24 bg-gray-900 sm: p-6 ">
       <Nav />
       <div className="max-w-2xl ml-auto mr-auto">
-        <form>
+        <form action={formAction}>
           <div className="grid gap-x-6 gap-y-8 sm:grid-cols-6">
             <div className="pb-3 col-span-2">
               <label>Last Name</label>
@@ -155,33 +160,34 @@ const Add = () => {
                   //   class="np rs axx"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                    clip-rule="evenodd"
+                    clipRule="evenodd"
                   ></path>
                 </svg>
+                <input type="file" id="file" name="file" accept="images/*" />
                 <button className="leading-5 py-2 bg-[rgba(255,255,255,0.05)] font-semibold px-3 rounded-md">
                   Change
                 </button>
               </div>
-             
             </div>
           </div>
           <div className="border-t pt-6 mt-6 flex justify-end gap-x-6">
-                <button
-                  type="button"
-                  className="text-sm font-semibold leading-6 text-white"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="submit"
-                  className="rounded-md bg-yellow-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Save
-                </button>
-              </div>
+            <button
+              type="button"
+              className="text-sm font-semibold leading-6 text-white"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              className="rounded-md bg-yellow-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Save
+            </button>
+          </div>
         </form>
+        <div>{state?.status && state?.message}</div>
       </div>
     </main>
   );
