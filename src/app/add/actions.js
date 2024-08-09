@@ -11,14 +11,15 @@ const s3Client = new S3Client({
     }
 })
 
-async function uploadFileToS3(file, fileName) {
+async function uploadFileToS3(file, fileName, fileType) {
     const fileBuffer = file;
-    console.log('fileName', fileName);
+    console.log('fileBuffer', fileBuffer);
+    console.log('fileType', fileType);
     const params = {
         Bucket: process.env.S3_BUCKET_NAME,
         Key: `${fileName}`,
         Body: fileBuffer,
-        ContentType: "image/jpg"
+        ContentType: fileType,
     }
     console.log('params.Bucket', params.Bucket);
 
@@ -41,16 +42,19 @@ export async function uploadFile(prevState, formData) {
         const file = formData.get("file");
         console.log('file', file);
 
-        // console.log('lastName', lastName);
         console.log("------")
         if(file.size === 0) {
             return { status: "error", message: "Please select a file."}
         }
+        const fileType = file.type.split("/")[1];
+
+        const { lastName, firstName } = Object.fromEntries(formData);
+        const s3FileName = `${lastName}${firstName}.${fileType}`;
+
 
 
         const buffer = Buffer.from(await file.arrayBuffer())
-        console.log("uploading file to s3.........")
-        await uploadFileToS3(buffer, file.name);
+        await uploadFileToS3(buffer, s3FileName, fileType);
 
         revalidatePath("/")
         return { status: "success", message: "File has been uploaded."}
