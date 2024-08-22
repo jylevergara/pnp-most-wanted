@@ -1,5 +1,3 @@
-// "use client";
-import Image from "next/image";
 import {
   AwaitedReactNode,
   JSXElementConstructor,
@@ -10,7 +8,6 @@ import {
   useEffect,
   useState,
 } from "react";
-// import userData from "./wanted.json";
 import Link from "next/link";
 import Nav from "./(components)/Nav";
 
@@ -26,10 +23,6 @@ const getPersons = async () => {
   }
 };
 
-function handleClick(id: any) {
-  console.log("clicked!", id);
-}
-
 const Home = async () => {
   const { persons } = await getPersons();
   return (
@@ -42,10 +35,10 @@ const Home = async () => {
           </h1>
         </div>
         <ul className="grid grid-cols-3 gap-x-8 gap-y-24 mt-20 sm: grid-cols-2">
-          {persons.map(
+          {persons && persons.map(
             (person: {
               id: Key | null | undefined;
-              image: string | undefined;
+              imageUrl: string | undefined;
               name: string
               reward:
                 | string
@@ -76,7 +69,7 @@ const Home = async () => {
                 >
                   <img
                     className="h-24 w-24 rounded-full mx-auto"
-                    src={person.image}
+                    src={person.imageUrl}
                     alt={`photo of ${person.name}`}
                   />
                   <h3 className="mt-6 text-lg font-semibold text-white leading-7 text-center">

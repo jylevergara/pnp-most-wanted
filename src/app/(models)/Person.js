@@ -15,7 +15,7 @@ const personSchema = new Schema(
     dilgMcNo: String,
     criminalCaseNo: String,
     region: String,
-    image: String,
+    imageUrl: String,
     active: Boolean,
   },
   { timestamps: true, collection: "persons" }

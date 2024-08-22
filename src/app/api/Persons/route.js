@@ -1,12 +1,11 @@
-import Person from "@/app/(models)/Person";
+import Person from "@/app/(models)/Person"
 import { NextResponse } from "next/server";
-
 
 // creating person data
 export async function POST(req) {
   try {
     const body = await req.json();
-    const personData = body.formData;
+    const personData = body;
     await Person.create(personData);
 
     return NextResponse.json(

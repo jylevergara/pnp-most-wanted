@@ -4,34 +4,52 @@ import { useState } from "react";
 import Nav from "../(components)/Nav";
 import { uploadFile } from "@/app/add/actions";
 import { useFormState } from "react-dom";
+import { useRouter } from "next/navigation";
 
 const Add = () => {
-  const initialState = { message: null };
-  const [state, formAction] = useFormState(uploadFile, initialState);
-
+    const router = useRouter();
+//   const initialState = { message: null };
+  
   const [values, setValues] = useState({
-    lastName: "",
-    firstName: "",
-    alias: "",
-    offenses: "",
-    reward: 0,
-    issuingCourt: "",
-    dilgMcNo: "",
-    criminalCaseNo: "",
-    region: "",
-  });
+      lastName: "",
+      firstName: "",
+      alias: "",
+      offenses: "",
+      reward: 0,
+      issuingCourt: "",
+      dilgMcNo: "",
+      criminalCaseNo: "",
+      region: "",
+    });
+    const [state, formAction] = useFormState(uploadFile, values);
 
   function handleTextChange(event) {
     const value = event.target.value;
-    console.log("value", value);
-    console.log("event.target.name", event.target.name);
     setValues((prev) => {
-      console.log("prev", prev);
       return {
         ...prev,
         [event.target.name]: value,
       };
     });
+  }
+
+  async function handleSubmit() {
+    try {
+        const res = await fetch("../api/Persons", {
+          method: "POST",
+          body: JSON.stringify(values),
+          "content-type": "application/json",
+        });
+        console.log("you made it here");
+    
+        if (!res.ok) {
+          throw new Error("Failed to add ");
+        }
+        console.log('res', res);
+        return { status: "success", message: "Data has been uploaded." };
+      } catch (error) {
+        return { status: "error", message: "Oh no, failed to upload data." };
+      }
   }
 
   return (
@@ -181,6 +199,7 @@ const Add = () => {
             </button>
             <button
               type="submit"
+            //   onClick={handleSubmit}
               className="rounded-md bg-yellow-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Save
