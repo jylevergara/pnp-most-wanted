@@ -20,9 +20,9 @@ const Info = async ({ params }) => {
   return (
     <main className="min-h-screen items-center p-24 bg-gray-900 sm: p-6">
       <Nav/>
-      <div>
+      <div className="max-w-3xl ml-auto mr-auto">
         <div>
-          <h3 className="text-lg">Most Wanted Person Information</h3>
+          <h3 className="text-lg mb-8">Most Wanted Person Information</h3>
           <p className="mt-1">Personal details</p>
         </div>
         <div className="mt-6">
